@@ -1,0 +1,48 @@
+#topnav {
+    background-color: initial;
+    border-width: 0;
+    inset-inline-end: 0;
+    inset-inline-start: 0;
+    position: fixed;
+    transition-duration: .5s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    z-index: 9;
+}
+
+:is(:where([dir=ltr]) #topnav .menu_extras) {
+    float: right;
+}
+
+#topnav .navbar_toggle {
+    border-width: 0;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+ 
+@media (max-width: 991px) {
+    #topnav {
+        --tw-bg-opacity: 1;
+        --tw-shadow: 0 0 3px #3c485826;
+        --tw-shadow-colored: 0 0 3px var(--tw-shadow-color);
+        background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+        box-shadow: 0 0 #0000, 0 0 #0000, var(--tw-shadow);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        min-height: 74px;
+    }
+}
+
+#topnav.nav-sticky {
+    --tw-shadow: 0 0 3px #3c485826;
+    --tw-shadow-colored: 0 0 3px var(--tw-shadow-color);
+    background-color: #fff !important;
+    box-shadow: 0 0 #0000, 0 0 #0000, var(--tw-shadow);
+    box-shadow: var(0 0 #0000, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.rating-start {
+  color: gold;
+}
+ 

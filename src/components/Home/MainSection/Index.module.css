@@ -1,0 +1,48 @@
+/* Index.module.css */
+@keyframes fadeInUp {
+    from {
+      transform: translate3d(0, 40px, 0);
+      opacity: 0;
+    }
+  
+    to {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+  
+  .animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+  
+  .fadeInUp {
+    animation-name: fadeInUp;
+  }
+  
+  .delay-1 {
+    animation-delay: 1.3s;
+  }
+  
+  .delay-2 {
+    animation-delay: 1.6s;
+  }
+  
+  .animated-bg {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .animated-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    animation: fadeInUp 1s both;
+    z-index: -1; /* Ensure the content appears above the background */
+  }
+  
